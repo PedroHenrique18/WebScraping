@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dados da Raspagem</title>
+</head>
+<body>
+    {% for dado in dados %}
+    <h1>{{ dado.titulo }}</h1>
+    <p>Valor: R$ {{ dado.valor }}</p>
+    <p>Variação (dia): {{ dado.variacao }}</p>
+    <p>Mín (Dia): {{ dado.minimo_dia }}</p>
+    <p>Máx (Dia): {{ dado.maximo_dia }}</p>
+    <p>Volume: {{ dado.volume }}</p>
+    {% endfor %}
+</body>
+</html>

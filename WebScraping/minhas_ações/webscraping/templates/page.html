@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de URLs</title>
+</head>
+<body>
+    <h1>Lista de URLs Cadastradas</h1>
+    <ul>
+        {% for url in urls %}
+            <li><a href="{{ url.url }}">{{ url.url }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
