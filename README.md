@@ -1,24 +1,24 @@
-# WebScraping
+# Web Scraping
 
-Este é um projeto pessoal que visa a coleta de dados financeiros de empresas listadas na bolsa de valores B3 (antiga Bovespa) no site Infomoney. O projeto foi desenvolvido em Django e utiliza a biblioteca BeautifulSoup para fazer a raspagem de dados.
+This is a personal project aimed at collecting financial data from companies listed on the B3 stock exchange (formerly Bovespa) on the Infomoney website. The project is developed in Django and uses the BeautifulSoup library for data scraping.
 
-## Visão Geral do Projeto
+## Project Overview
 
-O projeto consiste em três principais funcionalidades:
+The project consists of three main functionalities:
 
-1. Listagem de URLs: Os usuários podem visualizar uma lista de URLs que representam as páginas de empresas e ações na bolsa. Cada URL é construída com base nos dados inseridos pelo usuário (nome da empresa e nome da ação).
+1. URL Listing: Users can view a list of URLs representing pages of companies and stocks on the stock exchange. Each URL is constructed based on the data entered by the user (company name and stock name).
 
-2. Cadastro de URLs: Os usuários podem cadastrar novas URLs. Ao fornecer o nome da empresa e o nome da ação, o sistema cria a URL da página correspondente no site Infomoney e a salva no banco de dados.
+2. URL Registration: Users can register new URLs. By providing the company name and stock name, the system creates the URL of the corresponding page on the Infomoney website and saves it in the database.
 
-3. Raspagem de Dados: O sistema realiza raspagem de dados financeiros das páginas das empresas e ações cadastradas. Os dados raspados incluem informações como o título, valor da ação, variação, mínimo do dia, máximo do dia e volume de negociação. As informações raspadas são então apresentadas ao usuário.
+3. Data Scraping: The system performs scraping of financial data from the pages of registered companies and stocks. Scraped data includes information such as title, stock price, variation, day's low, day's high, and trading volume. The scraped information is then presented to the user.
 
-## Configuração e Execução
+## Configuration and Execution
 
-Para executar este projeto em sua própria máquina, siga estas etapas:
+To run this project on your own machine, follow these steps:
 
-1. Certifique-se de ter Python e Django instalados em seu ambiente.
+1. Make sure you have Python and Django installed in your environment.
 
-2. Clone este repositório em sua máquina:
+2. Clone this repository to your machine:
 
 
 ```
@@ -26,7 +26,8 @@ git clone
 cd 
 ```
 
-3. Instale as dependências necessárias, incluindo o Django e BeautifulSoup:
+3. Install the necessary dependencies, including Django and BeautifulSoup:
+
 
 ```
 pip install django
@@ -34,28 +35,31 @@ pip install beautifulsoup4
 pip requests
 ```
 
-4. Realize as migrações do banco de dados:
+4. Perform database migrations:
+
 
 ```
 python manage.py makemigrations
 python manage.py migrate
 ```
 
-5. Inicie o servidor de desenvolvimento:
+5. Start the development server:
+
 
 ```
 python manage.py runserver
 ```
-6. Acesse o aplicativo em seu navegador em http://localhost:8000/.
 
-## Uso do Aplicativo
+6. Access the application in your browser at http://localhost:8000/.
 
-1. Acesse a página inicial do aplicativo.
-2. Você verá as urls disponiveis para uso(http://127.0.0.1:8000/lista_urls/,http://127.0.0.1:8000/cadastrar_url/,http://127.0.0.1:8000/raspagem_dados/)
-3. Para cadastrar uma nova URL, acesse a url(http://127.0.0.1:8000/cadastrar_url/ preencha o formulário com o nome da empresa e o nome da ação e clique no botão "Cadastrar URL" 
-4. Após o cadastro, você será redirecionado para a página de raspagem de dados, onde os dados financeiros das empresas cadastradas são exibidos.
+## Using the Application
 
-## Observações
+1. Access the application's home page.
+2. You will see the available URLs for usage (http://127.0.0.1:8000/list_urls/, http://127.0.0.1:8000/register_url/, http://127.0.0.1:8000/scrape_data/).
+3. To register a new URL, access the URL (http://127.0.0.1:8000/register_url/), fill out the form with the company name and stock name, and click the "Register URL" button.
+4. After registration, you will be redirected to the data scraping page, where the financial data of the registered companies is displayed.
 
-1. Este projeto é destinado apenas para fins de demonstração e aprendizado
-2. Este projeto pode ser estendido adicionando mais funcionalidades, como agendamento de raspagem
+## Notes
+
+1. This project is intended for demonstration and learning purposes only.
+2. This project can be extended by adding more features, such as scheduling scraping tasks.
